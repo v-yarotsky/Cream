@@ -7,8 +7,8 @@ Why do you want it?
 ------------------
 
 Consider you have this HTML:
+
 ```html
-...
 <body>
   <sidebar>
     Lorem Ipsum
@@ -19,7 +19,6 @@ Consider you have this HTML:
     ...
   </section>
 </body>
-...
 ```
 
 And you want both `<section>` and `<sidebar>` to be rounded with a border.
@@ -41,13 +40,14 @@ So you define it like:
 }
 ```
 
-```html
 And in your HTML:
+
+```html
   <sidebar class="rounded-box">...</sidebar>
   <section class="rounded-box">...</section>
 ```
 
-The problem is - `class="rounded-box"` is not about content, it's about presentation.
+The problem is – `class="rounded-box"` is not about content, it's about presentation.
 
 With CleanMyHtml you can deal with it the other way:
 
@@ -93,8 +93,8 @@ At the moment it won't work with dynamically added html nodes.
 Development dependencies:
 -------------------------
 
-Node.js >= 0.6.12
-npm >= 1.1.4
+* Node.js >= 0.6.12
+* npm >= 1.1.4
 
 How to develop:
 ---------------
