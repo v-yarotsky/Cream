@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+PATH=`npm bin`:$PATH
+
+case "$1" in
+  "spec")
+    jasmine-node --color --coffee "${@:2}" .
+    ;;
+  "compile")
+    coffee -c "${@:2}" -o ./lib ./src
+    ;;
+  *)
+    echo "No such build command: $1"
+    ;;
+esac;
+

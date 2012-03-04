@@ -8,5 +8,5 @@ npm >= 1.1.4
 How to develop:
 
 $ npm install
-$ ./node_modules/jasmine-node/bin/jasmine-node --autotest --color --coffee .
-$ ./node_modules/coffee-script/bin/coffee -cwo ./lib ./src
+$ ./run spec #or ./run spec --autotest
+$ ./run compile #or ./run compile --watch

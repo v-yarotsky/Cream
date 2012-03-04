@@ -1,0 +1,2 @@
+test = ->
+  return 1
