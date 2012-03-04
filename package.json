@@ -5,6 +5,7 @@
   "private": true,
   "devDependencies": {
     "jasmine-node": "1.0.21",
-    "coffee-script": ">= 1.1.2"
+    "coffee-script": ">= 1.1.2",
+    "jsdom": ">= 0.2.13"
   }
 }

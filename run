@@ -4,6 +4,7 @@ PATH=`npm bin`:$PATH
 
 case "$1" in
   "spec")
+    coffee -c ./spec/spec_helper.coffee
     jasmine-node --color --coffee "${@:2}" .
     ;;
   "compile")
