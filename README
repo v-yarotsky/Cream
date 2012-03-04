@@ -1,1 +1,12 @@
 Simple JavaScript library facilitating semantic HTML markup.
+
+Development dependencies:
+
+Node.js >= 0.6.12
+npm >= 1.1.4
+
+How to develop:
+
+$ npm install
+$ ./node_modules/jasmine-node/bin/jasmine-node --autotest --color --coffee .
+$ ./node_modules/coffee-script/bin/coffee -cwo ./lib ./src

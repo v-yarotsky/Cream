@@ -1,0 +1,9 @@
+{
+  "name": "CleanMyHtml",
+  "version": "0.0.1",
+  "author": "Maxim Yermolovich <yermalovich.m@gmail.com>, Vlarimir Yarotsky <vlarimir.yarotsky@gmail.com>",
+  "devDependencies": {
+    "jasmine-node": "1.0.21",
+    "coffee-script": ">= 1.1.2"
+  }
+}
