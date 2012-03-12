@@ -5,29 +5,29 @@ describe Parser, ->
   it 'empty stylesheet', ->
     result = new Parser().run('')
     expect(result).toEqual []
-    
+
   it 'normal stylesheet', ->
     stylesheet = '
       #first {
         .container;
         .sidebar;
       }
-      
+
       #second {
         .crazy;
         .perfect;
       }
     '
-    json = [
-      {'#first' : ['.container;','.sidebar;']},
-      {'#second' : ['.crazy;','.perfect;']}
-    ]
+    json = {
+      '#first' : ['.container;','.sidebar;'],
+      '#second' : ['.crazy;','.perfect;']
+    }
     result = new Parser().run(stylesheet)
     expect(result).toEqual(json)
-    
+
   it 'split whitespace', ->
     stylesheet = '
-      #first {  
+      #first {
           .container;
           .smth  ;
       }
@@ -35,4 +35,4 @@ describe Parser, ->
     split = '#first{.container;.smth;}'
     result = new Parser().split(stylesheet)
     expect(result).toEqual(split)
-    
+
