@@ -19,8 +19,8 @@ describe Parser, ->
       }
     '
     json = {
-      '#first' : ['.container;','.sidebar;'],
-      '#second' : ['.crazy;','.perfect;']
+      '#first' : ['.container','.sidebar'],
+      '#second' : ['.crazy','.perfect']
     }
     result = new Parser().run(stylesheet)
     expect(result).toEqual(json)

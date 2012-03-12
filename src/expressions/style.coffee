@@ -4,9 +4,9 @@ Expression = require('./expression').Expression
 class Style extends Expression
   constructor: (content) ->
     super content
-    @pattern = /(.+?);/g
+    @pattern = /(.+?);/
 
   build: () ->
-    @content
+    @content.match(@pattern)[1]
 
 root.Style = Style
