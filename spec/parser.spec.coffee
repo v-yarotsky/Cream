@@ -1,5 +1,5 @@
 require './spec_helper'
-Parser = require('../lib/parser').Parser
+Parser = require('../lib/cream.js').Parser
 
 describe Parser, ->
   it 'empty stylesheet', ->

@@ -1,7 +1,3 @@
-root = exports ? window
-Expression = require('./expression').Expression
-Style = require('./style').Style
-
 class Body extends Expression
   constructor: (content) ->
     super content
@@ -14,5 +10,3 @@ class Body extends Expression
 
   buildStyle: (result, style) ->
     result.push new Style(style).build()
-    
-root.Body = Body

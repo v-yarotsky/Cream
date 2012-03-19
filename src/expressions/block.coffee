@@ -1,8 +1,3 @@
-root = exports ? window
-Expression = require('./expression').Expression
-Selector = require('./selector').Selector
-Body = require('./body').Body
-
 class Block extends Expression
   constructor: (content) ->
     super content
@@ -18,5 +13,3 @@ class Block extends Expression
     result = {}
     result[selector] = body
     result
-    
- root.Block = Block

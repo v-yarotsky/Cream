@@ -1,7 +1,3 @@
-root = exports ? window
-Expression = require('./expression').Expression
-Block = require('./block').Block
-
 class Root extends Expression
   constructor: (content) ->
     super content
@@ -19,6 +15,3 @@ class Root extends Expression
 
   addElement: (result, selector, styles) ->
     result[selector] = if result[selector]? then result[selector].concat(styles) else styles
-
-
-root.Root = Root
