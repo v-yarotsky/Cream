@@ -17,6 +17,6 @@ global.window = window
 global.document = window.document
 global.location = "http://monitoring"
 
-require('../vendor/jquery-1.7.1.min')
+global.jQuery = require('../vendor/jquery-1.7.1.min')
 if (window.$)
   global.$ = window.$
