@@ -25,6 +25,17 @@ describe Parser, ->
     result = new Parser().run(stylesheet)
     expect(result).toEqual(json)
 
+  it 'Some selectors are duplicated', ->
+    stylesheet = '
+      #first {.container;}
+      #first {.sidebar;}
+    '
+    json = {
+      '#first' : ['.container', '.sidebar']
+    }
+    result = new Parser().run(stylesheet)
+    expect(result).toEqual(json)
+
   it 'split whitespace', ->
     stylesheet = '
       #first {
