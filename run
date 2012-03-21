@@ -8,7 +8,14 @@ case "$1" in
     jasmine-node --color --coffee "${@:2}" .
     ;;
   "compile")
-    coffee --join lib/cream.js --compile "${@:2}" ./src
+    coffee --join lib/cream.js --compile "${@:2}" ./src/parser.coffee \
+      ./src/expressions/expression.coffee \
+      ./src/expressions/block.coffee \
+      ./src/expressions/body.coffee \
+      ./src/expressions/root.coffee \
+      ./src/expressions/selector.coffee \
+      ./src/expressions/style.coffee \
+      ./src/cream.coffee
     ;;
   *)
     echo "No such build command: $1"
