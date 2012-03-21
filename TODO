@@ -1,0 +1,6 @@
+* Add "." to css classes
+* Dynamic DOM manipulations
+* Get rid of dependency on jQuery (introduce something more lightweight as an option)
+* Get rid of ajax file loading
+* Test parsing thoroughly and fix if needed
+
