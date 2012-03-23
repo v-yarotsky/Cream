@@ -8,8 +8,8 @@ describe 'Cream', ->
   it '$.cream() should work correctly', ->
     stylesheets = '
       #test {
-        container;
-        sidebar;
+        .container;
+        .sidebar;
       }'
 
     $.cream(stylesheets)

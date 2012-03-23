@@ -16,7 +16,9 @@
   $.fn.cream = (code) ->
     [parent, parser] = [$(this), new Parser()]
     $.each parser.run(code), (selector, styles) ->
-      parent.find(selector).addClass styles.join(' ')
+      $.each styles, (i) ->
+        style = styles[i].match(/[^.].+/)[0]
+        parent.find(selector).addClass style
 
   $.cream = (code) ->
     $('body').cream(code)
