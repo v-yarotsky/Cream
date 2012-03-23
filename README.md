@@ -82,13 +82,13 @@ And in your __CleanMyHtml.cmh__:
 }
 ```
 
-And it will add needed css classes to the html automatically, resulting in more readable and 
+And it will add needed css classes to the html automatically, resulting in more readable and
 maintainable source html!
 
 Caveats:
 --------
 
-At the moment it won't work with dynamically added html nodes.
+At this moment it works with dynamically elements only if you call $(element).trigger('create')
 
 Development dependencies:
 -------------------------

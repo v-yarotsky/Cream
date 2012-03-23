@@ -15,3 +15,18 @@ describe 'Cream', ->
     $.cream(stylesheets)
     result = $('#test').is('.container, .sidebar')
     expect(result).toEqual(true)
+
+  it '$.cream() should work correctly with dynamic elements', ->
+    stylesheets = '
+      #dynamic-element {
+        .container;
+        .sidebar;
+      }
+    '
+    $.cream(stylesheets)
+    element = $('<div id="dynamic-element"></div>')
+    $('body').append(element)
+    element.trigger('create')
+    result = element.is('.container, .sidebar')
+    expect(result).toEqual(true)
+
