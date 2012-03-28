@@ -26,6 +26,8 @@
         addStyles $(this), styles
       )
       addStyles element, styles
+    parent.trigger('cream')
+
 
   $.cream = (code) ->
     $('body').cream(code)

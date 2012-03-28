@@ -30,3 +30,9 @@ describe 'Cream', ->
     result = element.is('.container, .sidebar')
     expect(result).toEqual(true)
 
+  it '$.cream() should triggere event', ->
+    [stylesheets, result] = ['', false]
+    $('body').bind 'cream', () ->
+      result = true
+    $.cream(stylesheets)
+    expect(result).toEqual(true)
