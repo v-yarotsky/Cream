@@ -2,11 +2,11 @@ require './spec_helper'
 Parser = require('../lib/cream.js').Parser
 
 describe Parser, ->
-  it 'empty stylesheet', ->
+  it 'should work with empty stylesheets', ->
     result = new Parser().run('')
     expect(result).toEqual []
 
-  it 'normal stylesheet', ->
+  it 'should work with ordinary stylesheets', ->
     stylesheet = '
       #first {
         .container;
@@ -25,7 +25,7 @@ describe Parser, ->
     result = new Parser().run(stylesheet)
     expect(result).toEqual(json)
 
-  it 'Some selectors are duplicated', ->
+  it 'should work with some duplicated selectores', ->
     stylesheet = '
       #first {.container;}
       #first {.sidebar;}
@@ -36,7 +36,7 @@ describe Parser, ->
     result = new Parser().run(stylesheet)
     expect(result).toEqual(json)
 
-  it 'split whitespace', ->
+  it 'should skip whitespace', ->
     stylesheet = '
       #first {
           .container;
