@@ -1,7 +1,7 @@
 class Block extends Expression
   constructor: (content) ->
     super content
-    @pattern = /(.+?){(.+)}/
+    @pattern = /\s*(.+?)\s*{(.+)}/
 
   build: () ->
     result = @content.match @pattern

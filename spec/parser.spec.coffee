@@ -36,14 +36,15 @@ describe Parser, ->
     result = new Parser().run(stylesheet)
     expect(result).toEqual(json)
 
-  it 'should skip whitespace', ->
+  it 'should work with simple nested selectores', ->
     stylesheet = '
-      #first {
-          .container;
-          .smth  ;
-      }
+      #first { .sidebar; }
+      #first .second { .container; }
     '
-    split = '#first{.container;.smth;}'
-    result = new Parser().split(stylesheet)
-    expect(result).toEqual(split)
+    json = {
+      '#first' : ['.sidebar'],
+      '#first .second' : ['.container']
+    }
+    result = new Parser().run(stylesheet)
+    expect(result).toEqual(json)
 

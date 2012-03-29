@@ -1,6 +1,6 @@
 class Body extends Expression
   constructor: (content) ->
-    super content
+    super @skip(content)
     @pattern = /.+?;/g
 
   build: () ->
@@ -10,3 +10,6 @@ class Body extends Expression
 
   buildStyle: (result, style) ->
     result.push new Style(style).build()
+
+  skip: (code) ->
+    code.replace /\s*/g, ''
